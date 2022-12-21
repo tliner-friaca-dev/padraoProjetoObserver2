@@ -1,5 +1,6 @@
 package br.com.projeto.observer.ouvintes;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import br.com.projeto.observer.model.FichaAlteracaoPeso;
@@ -21,10 +22,10 @@ public class AcademiaOuvinte implements OuvinteInt {
 
         for (FichaAlteracaoPeso fichaAlteracaoPeso : fichasAlteracaoPeso) {
             
-            System.out.printf("Olá %s. A academia %s, avisa que vc teve uma alteração em seu peso para: %2f\n", 
+            System.out.printf("Olá %s. A academia %s, avisa que vc teve uma alteração em seu peso para: %,.2f\n", 
                                 fichaAlteracaoPeso.getAluno().getNome().toUpperCase(),
                                 fichaAlteracaoPeso.getAcademia().getDescricao().toUpperCase(),
-                                fichaAlteracaoPeso.getAluno().getPeso());
+                                Double.parseDouble(fichaAlteracaoPeso.getAluno().getPeso().toString()));
 
         }
         

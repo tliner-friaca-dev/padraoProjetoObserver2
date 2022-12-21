@@ -21,10 +21,10 @@ public class PersonalTrainerOuvinte implements OuvinteInt {
 
         for (FichaAlteracaoPeso fichaAlteracaoPeso : fichasAlteracaoPeso) {
             
-            System.out.printf("Olá %s. Aqui é o personal trainer %s. Devido a alteração seu peso para %2f vou montar um novo treino.\n", 
+            System.out.printf("Olá %s. Aqui é o personal trainer %s. Devido a alteração seu peso para %,.2f vou montar um novo treino.\n", 
                                 fichaAlteracaoPeso.getAluno().getNome().toUpperCase(),
                                 fichaAlteracaoPeso.getPersonalTrainer().getNome().toUpperCase(),
-                                fichaAlteracaoPeso.getAluno().getPeso());
+                                Double.parseDouble(fichaAlteracaoPeso.getAluno().getPeso().toString()));
 
         }
 

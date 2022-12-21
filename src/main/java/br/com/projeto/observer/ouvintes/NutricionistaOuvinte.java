@@ -21,10 +21,10 @@ public class NutricionistaOuvinte implements OuvinteInt {
 
         for (FichaAlteracaoPeso fichaAlteracaoPeso : fichasAlteracaoPeso) {
             
-            System.out.printf("Olá %s. Aqui é a nutricionista %s. Devido a alteração seu peso para %2f vou montar um novo cardápio.\n", 
+            System.out.printf("Olá %s. Aqui é a nutricionista %s. Devido a alteração seu peso para %,.2f vou montar um novo cardápio.\n", 
                                 fichaAlteracaoPeso.getAluno().getNome().toUpperCase(),
                                 fichaAlteracaoPeso.getNutricionista().getNome().toUpperCase(),
-                                fichaAlteracaoPeso.getAluno().getPeso());
+                                Double.parseDouble(fichaAlteracaoPeso.getAluno().getPeso().toString()));
 
         }
 
